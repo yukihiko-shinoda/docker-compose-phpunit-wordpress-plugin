@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "/root/.composer/vendor"
+		},
+		{
+			"path": "/usr/src/wordpress"
+		},
+		{
+			"path": "/tmp/wordpress-tests-lib"
+		}
+	],
+	"settings": {
+		"intelephense.environment.includePaths": [
+			"/root/.composer/vendor",
+			"/usr/src/wordpress",
+			"/tmp/wordpress-tests-lib"
+		],
+	}
+}
