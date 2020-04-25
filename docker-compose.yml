@@ -5,7 +5,7 @@ services:
     container_name: database
     environment:
       MYSQL_ROOT_PASSWORD: examplepass
-    image: mysql:5.7
+    image: mysql:${MYSQL_VERSION:-5.7}
 
   phpunit:
     command:
@@ -15,8 +15,8 @@ services:
       - database
     environment:
       DATABASE_PASSWORD: examplepass
-    image: futureys/phpunit-wordpress-plugin
+    image: ${DOCKER_IMAGE_PHPUNIT:-futureys/phpunit-wordpress-plugin}
     stdin_open: true
     tty: true
     volumes:
-      - ${PATH_TO_PLUGIN_DIRECTORY}:/plugin
+      - ${PATH_TO_INDIVIDUAL_PLUGIN_DIRECTORY:?err}:/plugin
