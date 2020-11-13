@@ -2,7 +2,6 @@
 version: '3.7'
 services:
   database:
-    container_name: database
     environment:
       MYSQL_ROOT_PASSWORD: examplepass
     image: mysql:${MYSQL_VERSION:-5.7}
@@ -10,7 +9,6 @@ services:
   phpunit:
     command:
       - bash
-    container_name: phpunit
     depends_on:
       - database
     environment:
