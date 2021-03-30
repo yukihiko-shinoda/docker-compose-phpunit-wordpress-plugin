@@ -22,5 +22,6 @@
 			"/usr/src/wordpress",
 			"/tmp/wordpress-tests-lib"
 		],
+		"phpcbf.standard": "WordPress-Core",
 	}
 }
