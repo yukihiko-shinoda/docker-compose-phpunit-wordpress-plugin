@@ -5,8 +5,8 @@
 	// Update the 'dockerComposeFile' list if you have more compose files or use different names.
 	// The .devcontainer/docker-compose.yml file contains any overrides you need/want to make.
 	"dockerComposeFile": [
-		"../docker-compose.yml",
-		"docker-compose.yml"
+		"../compose.yml",
+		"compose.yml"
 	],
 
 	// The 'service' property is the name of the service for the container that VS Code should
@@ -17,9 +17,24 @@
 	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
 	"workspaceFolder": "/workspace",
 
-	// Use 'settings' to set *default* container specific settings.json values on container create. 
-	// You can edit these settings after create using File > Preferences > Settings > Remote.
-	"settings": {},
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created in the array below.
+			"extensions": [
+				"bmewburn.vscode-intelephense-client",
+				"shevaua.phpcs",
+				"esbenp.prettier-vscode",
+				"dbaeumer.vscode-eslint",
+				"persoderlind.vscode-phpcbf",
+				"streetsidesoftware.code-spell-checker"
+			],
+			// Use 'settings' to set *default* container specific settings.json values on container create. 
+			// You can edit these settings after create using File > Preferences > Settings > Remote.
+			"settings": {
+			}
+		}
+	}
 
 	// Uncomment the next line to have VS Code connect as an existing non-root user in the container. See
 	// https://aka.ms/vscode-remote/containers/non-root for details on adding a non-root user if none exist.
@@ -33,14 +48,4 @@
 
 	// Uncomment the next line to run commands after the container is created - for example installing git.
 	// "postCreateCommand": "apt-get update && apt-get install -y git",
-
-	// Add the IDs of extensions you want installed when the container is created in the array below.
-	"extensions": [
-		"bmewburn.vscode-intelephense-client",
-		"shevaua.phpcs",
-		"esbenp.prettier-vscode",
-		"dbaeumer.vscode-eslint",
-		"persoderlind.vscode-phpcbf",
-		"streetsidesoftware.code-spell-checker"
-	]
 }

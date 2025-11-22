@@ -1,5 +1,4 @@
 ---
-version: '3.8'
 services:
   database:
     # command: --default-authentication-plugin=mysql_native_password
