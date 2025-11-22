@@ -15,9 +15,12 @@ services:
     # user: vscode
 
     # Uncomment if you want to add a different Dockerfile in the .devcontainer folder
-    # build:
-    #   context: .
-    #   dockerfile: Dockerfile
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+      args:
+        TAG_PHP_UNIT_WORDPRESS_PLUGIN: ${TAG_PHP_UNIT_WORDPRESS_PLUGIN?err}
+    image: futureys/phpunit-wordpress-plugin:development
 
     # Uncomment if you want to expose any additional ports. The snippet below exposes port 3000.
     # ports:
