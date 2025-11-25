@@ -22,16 +22,26 @@
 		"vscode": {
 			// Add the IDs of extensions you want installed when the container is created in the array below.
 			"extensions": [
+				"anthropic.claude-code",
+				"GitHub.copilot",
+				"streetsidesoftware.code-spell-checker",
 				"bmewburn.vscode-intelephense-client",
 				"shevaua.phpcs",
 				"esbenp.prettier-vscode",
 				"dbaeumer.vscode-eslint",
-				"persoderlind.vscode-phpcbf",
-				"streetsidesoftware.code-spell-checker"
+				"persoderlind.vscode-phpcbf"
 			],
 			// Use 'settings' to set *default* container specific settings.json values on container create. 
 			// You can edit these settings after create using File > Preferences > Settings > Remote.
 			"settings": {
+				"cSpell.customDictionaries": {
+					"project-words": {
+					"name": "project-words",
+					"path": "${workspaceRoot}/project-words.txt",
+					"description": "Words used in this project",
+					"addWords": true
+					}
+				}
 			}
 		}
 	}
